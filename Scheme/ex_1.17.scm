@@ -24,7 +24,7 @@
 (define (fast* a b count)
   (cond ((= b 0)
             (display count)
-            a)
+            0)
         ((isEven b) (double (fast* a (halve b) (+ count 1))))
         (else (+ a (double (fast* a (halve (- b 1)) (+ count 1)))))))
 
